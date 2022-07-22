@@ -6,7 +6,8 @@ import java.io.*;
 public class Base
 {
     
-        private static Scanner sc;
+        private static FastScanner sc;
+        private static StringBuilder finalAns;
         // GCD;
         private static int gcd(int num1, int num2)
         {
@@ -36,16 +37,44 @@ public class Base
             arr[j] = temp;
         }
     public static void main(String[] args) {
-        sc = new Scanner(System.in);
+        sc = new FastScanner();
+        finalAns = new StringBuilder();
         int test = sc.nextInt();
         while(test-->0){
             solve();
         }
+        System.out.println(finalAns);
     }
 
     private static void solve(){
         //Write your code here;
         
+    }
+
+    static class FastScanner {
+      BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+      StringTokenizer st=new StringTokenizer("");
+      String next() {
+        while (!st.hasMoreTokens())
+          try {
+            st=new StringTokenizer(br.readLine());
+          } catch (IOException e) {
+            e.printStackTrace();
+          }
+        return st.nextToken();
+      }
+      
+      int nextInt() {
+        return Integer.parseInt(next());
+      }
+      int[] readArray(int n) {
+        int[] a=new int[n];
+        for (int i=0; i<n; i++) a[i]=nextInt();
+        return a;
+      }
+      long nextLong() {
+        return Long.parseLong(next());
+      }
     }
     
 }
