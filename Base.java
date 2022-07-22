@@ -75,6 +75,14 @@ public class Base
       long nextLong() {
         return Long.parseLong(next());
       }
+
+      double nextDouble(){
+        return Double.parseDouble(next());
+      }
+
+      float nextFloat(){
+        return Float.parseFloat(next());
+      }
     }
     
 }
