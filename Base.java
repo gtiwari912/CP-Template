@@ -36,6 +36,41 @@ public class Base
             arr[i] = arr[j];
             arr[j] = temp;
         }
+
+      //REVERSING ARRAY;
+      private void reverse(int[] arr){
+        int start = 0, end = arr.length-1;
+        while(start<end){
+          int temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          start++; end--;
+        }
+      }
+      private void reverse(long[] arr){
+        int start = 0, end = arr.length-1;
+        while(start<end){
+          long temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          start++; end--;
+        }
+      }
+      private void reverse(char[] arr){
+        int start = 0, end = arr.length-1;
+        while(start<end){
+          char temp = arr[start];
+          arr[start] = arr[end];
+          arr[end] = temp;
+          start++; end--;
+        }
+      }
+      public String reverse(String str){
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+      }
+      
+      //MAIN METHOD;
     public static void main(String[] args) {
         sc = new FastScanner();
         finalAns = new StringBuilder();
