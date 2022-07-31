@@ -34,6 +34,14 @@ public class Base {
         a[i] = nextInt();
       return a;
     }
+      
+    int[][] readMatrix(int n, int m){
+        int[][] mat = new int[n][m];
+        for(int i = 0; i<n; i++)
+            for(int j = 0; j<m; j++)
+                mat[i][j] = nextInt();
+        return mat;
+    }
 
     long nextLong() {
       return Long.parseLong(next());
