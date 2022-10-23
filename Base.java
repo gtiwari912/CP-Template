@@ -56,7 +56,7 @@ public class Base {
     }
   }
 
-  private static StringBuilder finalAns;
+  static PrintWriter out;
 
   // GCD;
   private static int gcd(int num1, int num2) {
@@ -128,12 +128,12 @@ public class Base {
   // MAIN METHOD;
   public static void main(String[] args) {
     sc = new FastScanner();
-    finalAns = new StringBuilder();
+    out = new PrintWriter(System.out)
     int test = sc.nextInt();
     while (test-- > 0) {
       solve();
     }
-    System.out.println(finalAns);
+    out.flush();
   }
 
   private static void solve() {
