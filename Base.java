@@ -128,7 +128,7 @@ public class Base {
   // MAIN METHOD;
   public static void main(String[] args) {
     sc = new FastScanner();
-    out = new PrintWriter(System.out)
+    out = new PrintWriter(System.out);
     int test = sc.nextInt();
     while (test-- > 0) {
       solve();
